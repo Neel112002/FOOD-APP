@@ -21,7 +21,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
         body: Column(children: [
       Container(
           child: Container(
-        margin: EdgeInsets.only(top: 45, bottom: 15),
+        margin: EdgeInsets.only(top: Dimensions.height45, bottom: Dimensions.height15),
         padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
