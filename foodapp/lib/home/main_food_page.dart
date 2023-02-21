@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:foodapp/home/food_page_body.dart';
+import 'package:foodapp/utils/dimensions.dart';
 import 'package:foodapp/widgets/big_text.dart';
 import 'package:foodapp/widgets/small_text.dart';
 
@@ -15,12 +16,13 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    print("current height is "+MediaQuery.of(context).size.height.toString());
     return Scaffold(
         body: Column(children: [
       Container(
           child: Container(
         margin: EdgeInsets.only(top: 45, bottom: 15),
-        padding: EdgeInsets.only(left: 20, right: 20),
+        padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -42,7 +44,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 color: Colors.white,
               ),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(Dimensions.radius15),
                 color: Colors.blue,
               ),
             ))

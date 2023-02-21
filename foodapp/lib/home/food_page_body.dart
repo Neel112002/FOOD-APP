@@ -1,9 +1,12 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:foodapp/widgets/big_text.dart';
 import 'package:foodapp/widgets/icon_and_text_widget.dart';
 import 'package:foodapp/widgets/small_text.dart';
+import 'package:foodapp/utils/dimensions.dart';
+
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -16,7 +19,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pageController = PageController(viewportFraction: 0.75);
   var _currPageValue = 0.0;
   double scaleFactor = 0.8;
-  final _height = 220;
+   
+   final double _height =Dimensions.pageViewContainer;
   @override
   void initState() {
     super.initState();
@@ -35,15 +39,29 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Column(
+    children:[ Container(
       // color: Colors.red,
-      height: 320,
+      height: Dimensions.pageView,
       child: PageView.builder(
           controller: pageController,
           itemCount: 5,
           itemBuilder: (context, position) {
             return _buildPageItem(position);
           }),
+          ),
+          // ignore: unnecessary_new
+          new DotsIndicator(
+  dotsCount: 5,
+  position: _currPageValue,
+  decorator: DotsDecorator(
+    size: const Size.square(9.0),
+    activeSize: const Size(18.0, 9.0),
+    activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+  ),
+    
+)
+    ],
     );
   }
 
@@ -54,33 +72,37 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       var currTrans = _height * (1 - currScale) / 2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, currTrans, 0);
-    } else if (index == _currPageValue.floor() + 1) {
+    } 
+    else if (index == _currPageValue.floor() + 1) {
       var currScale =
           scaleFactor + (_currPageValue - index + 1) * (1 - scaleFactor);
       var currTrans = _height * (1 - currScale) / 2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1);
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, currTrans, 0);
-    } else if (index == _currPageValue.floor() - 1) {
+    } 
+    else if (index == _currPageValue.floor() - 1) {
       var currScale = 1 - (_currPageValue - index) * (1 - scaleFactor);
       var currTrans = _height * (1 - currScale) / 2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1);
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, currTrans, 0);
-    } else {
+    } 
+    else {
       var currScale = 0.8;
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, _height * (1 - scaleFactor) / 2, 1);
     }
 
+    ;
     return Transform(
       transform: matrix,
       child: Stack(children: [
         Container(
-          height: 220,
-          margin: EdgeInsets.only(left: 10, right: 10),
+          height: Dimensions.pageViewContainer,
+          margin: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(Dimensions.radius30),
               color: index.isEven ? Colors.blueGrey : Colors.blueAccent,
               image: DecorationImage(
                   fit: BoxFit.cover,
@@ -89,10 +111,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 120,
-              margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+              height: Dimensions.pageViewTextContainer,
+              margin: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20, bottom: Dimensions.height20),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(Dimensions.radius30),
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
@@ -101,13 +123,13 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         offset: Offset(0, 5))
                   ]),
               child: Container(
-                padding: EdgeInsets.only(top: 10, left: 15, right: 15),
+                padding: EdgeInsets.only(top: Dimensions.height10, left: 15, right: 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     BigText(text: "Chinese side"),
                     SizedBox(
-                      height: 10,
+                      height: Dimensions.height10,
                     ),
                     Row(
                       children: [
@@ -135,9 +157,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       ],
                     ),
                     SizedBox(
-                      height: 20,
+                      height: Dimensions.height20,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconAndTextWidget(
                             text: "Normal",
@@ -161,3 +184,4 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     );
   }
 }
+
