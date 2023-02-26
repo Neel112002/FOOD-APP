@@ -40,7 +40,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
-    children:[ Container(
+    children:[ 
+      //slider section
+      Container(
       // color: Colors.red,
       height: Dimensions.pageView,
       child: PageView.builder(
@@ -51,16 +53,113 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           }),
           ),
           // ignore: unnecessary_new
+          //dots
           new DotsIndicator(
-  dotsCount: 5,
-  position: _currPageValue,
-  decorator: DotsDecorator(
-    size: const Size.square(9.0),
-    activeSize: const Size(18.0, 9.0),
-    activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-  ),
-    
-)
+             dotsCount: 5,
+             position: _currPageValue,
+               decorator: DotsDecorator(
+                  size: const Size.square(9.0),
+                  activeSize: const Size(18.0, 9.0),
+                  activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                ),
+               ),
+          //Popular text
+          SizedBox(height: Dimensions.height20,),
+          Container(
+            margin: EdgeInsets.only(left: Dimensions.widht30),
+            child: Row(
+              children: [
+                BigText(text: "Most prefered"),
+                SizedBox(width: Dimensions.width10,),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 3),
+                  child: BigText(text: ".",color: Colors.black26,),
+                ),
+                SizedBox(width: Dimensions.width10,),
+                Container(
+                 margin: const EdgeInsets.only(bottom: 2),
+                 child: SmallText(text: "Food Pairing"),
+                )
+
+              ],
+            ),
+          ),
+      //list of food and imagies
+      Container(
+        height: 900,
+      child: ListView.builder(
+        physics: NeverScrollableScrollPhysics(),
+       // shrinkWrap: true,
+        itemCount: 10,
+        itemBuilder: (context,index){
+        return Container(
+         margin: EdgeInsets.only(left: Dimensions.width20,
+         right: Dimensions.widht15,
+         bottom: Dimensions.height10
+         ),
+         child: Row(
+          children: [
+            //images section
+            Container(
+              width: 120,
+              height: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
+                color: Colors.white38,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    "assets/image/food2.png"
+                  ))
+              ),
+            ),
+            //text container
+            Expanded(child:
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(Dimensions.radius15),
+                  bottomRight: Radius.circular(Dimensions.radius15)
+                ),
+                color: Colors.white
+              ),
+              child: Padding(padding: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                BigText(text: "SVIT CANTEEN APP FOR STUDENTS ",),
+                SizedBox(height: Dimensions.height10,),
+                SmallText(text: "tasty food"),
+                  SizedBox(height: Dimensions.height10,),
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconAndTextWidget(
+                            text: "Normal",
+                            icon: Icons.circle,
+                            iconColor: Colors.orange),
+                        IconAndTextWidget(
+                            text: "Canteen",
+                            icon: Icons.location_on,
+                            iconColor: Colors.blueGrey),
+                        IconAndTextWidget(
+                            text: "5 mins",
+                            icon: Icons.access_time_filled_rounded,
+                            iconColor: Colors.red)
+                      ],
+                    )
+              ],
+              ),
+              ),
+            )
+            )
+          ],
+         ),
+        );
+      })
+      )
     ],
     );
   }
