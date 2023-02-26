@@ -85,11 +85,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             ),
           ),
       //list of food and imagies
-      Container(
-        height: 900,
-      child: ListView.builder(
+    
+      ListView.builder(
         physics: NeverScrollableScrollPhysics(),
-       // shrinkWrap: true,
+        shrinkWrap: true,
         itemCount: 10,
         itemBuilder: (context,index){
         return Container(
@@ -101,8 +100,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           children: [
             //images section
             Container(
-              width: 120,
-              height: 120,
+              width: Dimensions.listViewImg,
+              height: Dimensions.listViewImg,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius20),
                 color: Colors.white38,
@@ -116,7 +115,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             //text container
             Expanded(child:
             Container(
-              height: 100,
+              height: Dimensions.listViewContSize,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(Dimensions.radius15),
@@ -159,7 +158,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
          ),
         );
       })
-      )
+      
     ],
     );
   }
