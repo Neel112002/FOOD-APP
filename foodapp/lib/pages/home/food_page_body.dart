@@ -11,6 +11,8 @@ import 'package:foodapp/utils/dimensions.dart';
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
 
+
+
   @override
   State<FoodPageBody> createState() => _FoodPageBodyState();
 }
@@ -19,7 +21,16 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pageController = PageController(viewportFraction: 0.75);
   var _currPageValue = 0.0;
   double scaleFactor = 0.8;
-   
+     var products=[
+    {
+     "name": "Chinese side ",
+     "image":"assets/image/food0.png"
+    }, 
+    {
+     "name": "Mexcian ",
+     "image":"assets/image/food1.png"
+    }
+  ];
    final double _height =Dimensions.pageViewContainer;
   @override
   void initState() {
