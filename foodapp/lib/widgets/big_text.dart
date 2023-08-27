@@ -13,20 +13,18 @@ class BigText extends StatelessWidget {
       this.color,
       required this.text,
       this.size = 0,
-      this.overFlow = TextOverflow.ellipsis
-      }
-      )
+      this.overFlow = TextOverflow.ellipsis})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      maxLines: 1,
+      // maxLines: 1,
       overflow: overFlow,
       style: TextStyle(
         color: color,
-        fontSize: size==0?Dimensions.font20:size,
+        fontSize: size == 0 ? Dimensions.font20 : size,
         fontFamily: 'Bold',
         fontWeight: FontWeight.w400,
       ),

@@ -67,6 +67,7 @@ flutter:
     - assets/food0.png
     - assets/food1.png
     - assets/food2.png
+    - assets/image/
      
   #   - images/a_dot_ham.jpeg
 
