@@ -94,12 +94,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/homepage',
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'homepage')
-              : HomepageWidget(
-                  category: params.getParam(
-                    'category',
-                    ParamType.String,
-                  ),
-                ),
+              : const HomepageWidget(),
         ),
         FFRoute(
           name: 'browse',

@@ -4,19 +4,13 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:text_search/text_search.dart';
 import 'homepage_model.dart';
 export 'homepage_model.dart';
 
 class HomepageWidget extends StatefulWidget {
-  const HomepageWidget({
-    super.key,
-    String? category,
-  }) : category = category ?? '\"All\"';
-
-  final String category;
+  const HomepageWidget({super.key});
 
   @override
   State<HomepageWidget> createState() => _HomepageWidgetState();
@@ -34,12 +28,6 @@ class _HomepageWidgetState extends State<HomepageWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => HomepageModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      _model.resturantFilter = widget.category;
-      safeSetState(() {});
-    });
 
     _model.searchTextController ??= TextEditingController();
     _model.searchFocusNode ??= FocusNode();
@@ -102,13 +90,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<List<ResturantsRecord>>(
-      stream: queryResturantsRecord(
-        queryBuilder: (resturantsRecord) => resturantsRecord.where(
-          'category',
-          isEqualTo:
-              _model.resturantFilter != '' ? _model.resturantFilter : null,
-        ),
-      ),
+      stream: queryResturantsRecord(),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {

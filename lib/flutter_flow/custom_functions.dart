@@ -14,13 +14,7 @@ import '/auth/firebase_auth/auth_util.dart';
 
 List<ResturantsRecord> getResturantList(
   List<ResturantsRecord> list,
-  List<ResturantsRecord> searchResult,
+  List<ResturantsRecord> searchResults,
 ) {
-  return searchResult.length > 0 ? searchResult : list;
-}
-
-List<String> getUniqueCategories(List<String> categories) {
-  return categories
-      .toSet()
-      .toList(); // we first converted to set because set removes duplicates
+  return searchResults.length > 0 ? searchResults : list;
 }
