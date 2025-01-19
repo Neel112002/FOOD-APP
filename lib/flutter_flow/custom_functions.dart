@@ -18,3 +18,7 @@ List<ResturantsRecord> getResturantList(
 ) {
   return searchResults.length > 0 ? searchResults : list;
 }
+
+List<String> getUniqueCategories(List<String> categories) {
+  return categories.toSet().toList();
+}
