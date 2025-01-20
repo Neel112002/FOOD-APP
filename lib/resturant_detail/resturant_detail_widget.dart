@@ -1,6 +1,7 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'resturant_detail_model.dart';
 export 'resturant_detail_model.dart';
@@ -129,16 +130,43 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                         children: [
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 8.0, 0.0, 8.0),
-                            child: Text(
-                              '4.8 (100 ratings)',
-                              style: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .override(
-                                    fontFamily: 'Inter Tight',
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    letterSpacing: 0.0,
-                                  ),
+                                0.0, 8.0, 8.0, 8.0),
+                            child: StreamBuilder<List<ReviewsRecord>>(
+                              stream: queryReviewsRecord(
+                                parent: widget.resturantRef,
+                              ),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                }
+                                List<ReviewsRecord>
+                                    timestampTextReviewsRecordList =
+                                    snapshot.data!;
+
+                                return Text(
+                                  '⭐️${functions.getAverageRating(timestampTextReviewsRecordList.map((e) => e.rating).toList()).toString()}(${timestampTextReviewsRecordList.length.toString()}) ratings',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Inter Tight',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        letterSpacing: 0.0,
+                                      ),
+                                );
+                              },
                             ),
                           ),
                           Padding(
@@ -146,20 +174,6 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                                 0.0, 8.0, 0.0, 8.0),
                             child: Text(
                               resturantDetailResturantsRecord.category,
-                              style: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .override(
-                                    fontFamily: 'Inter Tight',
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 8.0, 0.0, 8.0),
-                            child: Text(
-                              '10:00am',
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -178,7 +192,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 8.0),
                             child: Text(
-                              'Open Until${dateTimeFormat("jm", resturantDetailResturantsRecord.close)}',
+                              'Open Until   ${dateTimeFormat("jm", resturantDetailResturantsRecord.close)}',
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(

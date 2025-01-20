@@ -4,3 +4,4 @@ export '/homepage/homepage_widget.dart' show HomepageWidget;
 export '/browse/browse_widget.dart' show BrowseWidget;
 export '/resturant_detail/resturant_detail_widget.dart'
     show ResturantDetailWidget;
+export '/resturant_info/resturant_info_widget.dart' show ResturantInfoWidget;

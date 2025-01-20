@@ -22,3 +22,8 @@ List<ResturantsRecord> getResturantList(
 List<String> getUniqueCategories(List<String> categories) {
   return categories.toSet().toList();
 }
+
+double getAverageRating(List<int> ratings) {
+  int sum = ratings.reduce((int value, int element) => value + element);
+  return sum / ratings.length;
+}
