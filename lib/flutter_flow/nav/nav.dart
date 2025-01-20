@@ -107,6 +107,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'browse')
               : const BrowseWidget(),
+        ),
+        FFRoute(
+          name: 'resturant_detail',
+          path: '/resturantDetail',
+          builder: (context, params) => ResturantDetailWidget(
+            resturantRef: params.getParam(
+              'resturantRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['resturants'],
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
