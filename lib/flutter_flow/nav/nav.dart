@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -131,6 +133,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               collectionNamePath: ['resturants'],
             ),
           ),
+        ),
+        FFRoute(
+          name: 'menu_itemdetail',
+          path: '/menuItemdetail',
+          builder: (context, params) => MenuItemdetailWidget(
+            menuitemRef: params.getParam(
+              'menuitemRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['resturants', 'menuitems'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'cart',
+          path: '/cart',
+          builder: (context, params) =>
+              params.isEmpty ? const NavBarPage(initialPage: 'cart') : const CartWidget(),
+        ),
+        FFRoute(
+          name: 'checkout',
+          path: '/checkout',
+          builder: (context, params) => const CheckoutWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -250,6 +275,7 @@ class FFParameters {
     ParamType type, {
     bool isList = false,
     List<String>? collectionNamePath,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -268,6 +294,7 @@ class FFParameters {
       type,
       isList,
       collectionNamePath: collectionNamePath,
+      structBuilder: structBuilder,
     );
   }
 }

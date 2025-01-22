@@ -15,11 +15,6 @@ class OrdersRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "resturantRef" field.
-  DocumentReference? _resturantRef;
-  DocumentReference? get resturantRef => _resturantRef;
-  bool hasResturantRef() => _resturantRef != null;
-
   // "timestamp" field.
   DateTime? _timestamp;
   DateTime? get timestamp => _timestamp;
@@ -30,12 +25,20 @@ class OrdersRecord extends FirestoreRecord {
   String get status => _status ?? '';
   bool hasStatus() => _status != null;
 
+  // "items" field.
+  List<CartItemTypeStruct>? _items;
+  List<CartItemTypeStruct> get items => _items ?? const [];
+  bool hasItems() => _items != null;
+
   DocumentReference get parentReference => reference.parent.parent!;
 
   void _initializeFields() {
-    _resturantRef = snapshotData['resturantRef'] as DocumentReference?;
     _timestamp = snapshotData['timestamp'] as DateTime?;
     _status = snapshotData['status'] as String?;
+    _items = getStructList(
+      snapshotData['items'],
+      CartItemTypeStruct.fromMap,
+    );
   }
 
   static Query<Map<String, dynamic>> collection([DocumentReference? parent]) =>
@@ -77,13 +80,11 @@ class OrdersRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createOrdersRecordData({
-  DocumentReference? resturantRef,
   DateTime? timestamp,
   String? status,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'resturantRef': resturantRef,
       'timestamp': timestamp,
       'status': status,
     }.withoutNulls,
@@ -97,14 +98,15 @@ class OrdersRecordDocumentEquality implements Equality<OrdersRecord> {
 
   @override
   bool equals(OrdersRecord? e1, OrdersRecord? e2) {
-    return e1?.resturantRef == e2?.resturantRef &&
-        e1?.timestamp == e2?.timestamp &&
-        e1?.status == e2?.status;
+    const listEquality = ListEquality();
+    return e1?.timestamp == e2?.timestamp &&
+        e1?.status == e2?.status &&
+        listEquality.equals(e1?.items, e2?.items);
   }
 
   @override
   int hash(OrdersRecord? e) =>
-      const ListEquality().hash([e?.resturantRef, e?.timestamp, e?.status]);
+      const ListEquality().hash([e?.timestamp, e?.status, e?.items]);
 
   @override
   bool isValidKey(Object? o) => o is OrdersRecord;

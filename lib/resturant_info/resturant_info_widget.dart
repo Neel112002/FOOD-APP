@@ -2,9 +2,11 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_static_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:mapbox_search/mapbox_search.dart' as mapbox;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'resturant_info_model.dart';
 export 'resturant_info_model.dart';
 
@@ -77,7 +79,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
               title: Text(
                 'Restsurant Info',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Inter Tight',
+                      font: GoogleFonts.interTight(),
                       color: Colors.white,
                       fontSize: 22.0,
                       letterSpacing: 0.0,
@@ -126,7 +128,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                           resturantInfoResturantsRecord.name,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(),
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -144,7 +146,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                           resturantInfoResturantsRecord.address,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(),
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -162,7 +164,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                           'Open Until  ${dateTimeFormat("jm", resturantInfoResturantsRecord.close)}',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(),
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -203,11 +205,49 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(),
                                     letterSpacing: 0.0,
                                   ),
                             );
                           },
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 20.0, 0.0, 0.0),
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              context.safePop();
+                            },
+                            text: 'Go Back',
+                            options: FFButtonOptions(
+                              width: MediaQuery.sizeOf(context).width * 0.5,
+                              height: 40.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 16.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    font: GoogleFonts.interTight(),
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                              elevation: 0.0,
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                          ),
                         ),
                       ],
                     ),

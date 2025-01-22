@@ -5,3 +5,6 @@ export '/browse/browse_widget.dart' show BrowseWidget;
 export '/resturant_detail/resturant_detail_widget.dart'
     show ResturantDetailWidget;
 export '/resturant_info/resturant_info_widget.dart' show ResturantInfoWidget;
+export '/menu_itemdetail/menu_itemdetail_widget.dart' show MenuItemdetailWidget;
+export '/cart/cart_widget.dart' show CartWidget;
+export '/checkout/checkout_widget.dart' show CheckoutWidget;

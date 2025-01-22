@@ -6,6 +6,7 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:text_search/text_search.dart';
 import 'homepage_model.dart';
 export 'homepage_model.dart';
@@ -143,7 +144,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
               title: Text(
                 'Home Page',
                 style: FlutterFlowTheme.of(context).titleLarge.override(
-                      fontFamily: 'Inter Tight',
+                      font: GoogleFonts.interTight(),
                       letterSpacing: 0.0,
                     ),
               ),
@@ -218,7 +219,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(),
                                             color: const Color(0xFF090909),
                                             letterSpacing: 0.0,
                                           ),
@@ -226,7 +227,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(),
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -270,7 +271,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(),
                                           color: const Color(0xFF020202),
                                           letterSpacing: 0.0,
                                         ),
@@ -294,7 +295,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                         'Resturants',
                         style:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(),
                                   letterSpacing: 0.0,
                                 ),
                       ).animateOnPageLoad(
@@ -390,7 +391,8 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font:
+                                                            GoogleFonts.inter(),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -407,7 +409,8 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font:
+                                                            GoogleFonts.inter(),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
