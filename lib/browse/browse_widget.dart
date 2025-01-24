@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'browse_model.dart';
 export 'browse_model.dart';
 
@@ -70,7 +69,7 @@ class _BrowseWidgetState extends State<BrowseWidget> {
               title: Text(
                 'Categories',
                 style: FlutterFlowTheme.of(context).displaySmall.override(
-                      font: GoogleFonts.interTight(),
+                      fontFamily: 'Inter Tight',
                       letterSpacing: 0.0,
                     ),
               ),
@@ -148,7 +147,7 @@ class _BrowseWidgetState extends State<BrowseWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                   ),

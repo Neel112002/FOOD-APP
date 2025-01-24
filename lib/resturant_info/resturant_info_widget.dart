@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:mapbox_search/mapbox_search.dart' as mapbox;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'resturant_info_model.dart';
 export 'resturant_info_model.dart';
 
@@ -79,7 +78,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
               title: Text(
                 'Restsurant Info',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      font: GoogleFonts.interTight(),
+                      fontFamily: 'Inter Tight',
                       color: Colors.white,
                       fontSize: 22.0,
                       letterSpacing: 0.0,
@@ -128,7 +127,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                           resturantInfoResturantsRecord.name,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -146,7 +145,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                           resturantInfoResturantsRecord.address,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -164,7 +163,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                           'Open Until  ${dateTimeFormat("jm", resturantInfoResturantsRecord.close)}',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -205,7 +204,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                             );
@@ -240,7 +239,7 @@ class _ResturantInfoWidgetState extends State<ResturantInfoWidget> {
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     color: Colors.white,
                                     letterSpacing: 0.0,
                                   ),

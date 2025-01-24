@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'checkout_model.dart';
 export 'checkout_model.dart';
@@ -53,7 +52,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
@@ -77,7 +76,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                   obscureCvv: false,
                   spacing: 12.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(),
+                        fontFamily: 'Inter',
                         letterSpacing: 0.0,
                       ),
                   inputDecoration: InputDecoration(
@@ -136,7 +135,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                 ),

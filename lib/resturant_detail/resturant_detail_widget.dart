@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'resturant_detail_model.dart';
 export 'resturant_detail_model.dart';
 
@@ -85,7 +84,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
             title: Text(
               'Restaurant Details',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    font: GoogleFonts.interTight(),
+                    fontFamily: 'Inter Tight',
                     letterSpacing: 0.0,
                   ),
             ),
@@ -144,7 +143,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
-                                font: GoogleFonts.interTight(),
+                                fontFamily: 'Inter Tight',
                                 letterSpacing: 0.0,
                               ),
                         ),
@@ -184,7 +183,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
                                         letterSpacing: 0.0,
@@ -201,7 +200,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                   ),
@@ -220,7 +219,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                   ),
@@ -231,7 +230,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                       Text(
                         'Restaurant Description ',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
-                              font: GoogleFonts.inter(),
+                              fontFamily: 'Inter',
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -243,7 +242,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                       Text(
                         'Menu Items',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
-                              font: GoogleFonts.inter(),
+                              fontFamily: 'Inter',
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -319,7 +318,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                font: GoogleFonts.inter(),
+                                                fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -337,7 +336,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                font: GoogleFonts.inter(),
+                                                fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -349,7 +348,7 @@ class _ResturantDetailWidgetState extends State<ResturantDetailWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                font: GoogleFonts.inter(),
+                                                fontFamily: 'Inter',
                                                 letterSpacing: 0.0,
                                               ),
                                         ),

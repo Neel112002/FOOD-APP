@@ -7,7 +7,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -149,7 +148,7 @@ class _LoginWidgetState extends State<LoginWidget>
                 child: Text(
                   'brand.ai',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
-                        font: GoogleFonts.plusJakartaSans(),
+                        fontFamily: 'Plus Jakarta Sans',
                         color: const Color(0xFF101213),
                         fontSize: 36.0,
                         letterSpacing: 0.0,
@@ -211,8 +210,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       context)
                                                   .headlineMedium
                                                   .override(
-                                                    font: GoogleFonts
-                                                        .plusJakartaSans(),
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
                                                     color: const Color(0xFF101213),
                                                     fontSize: 24.0,
                                                     letterSpacing: 0.0,
@@ -230,8 +229,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 14.0,
@@ -263,8 +262,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .labelLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 16.0,
@@ -325,8 +324,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color:
                                                             const Color(0xFF101213),
                                                         fontSize: 16.0,
@@ -367,8 +366,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .labelLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 16.0,
@@ -449,8 +448,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color:
                                                             const Color(0xFF101213),
                                                         fontSize: 16.0,
@@ -489,8 +488,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .labelLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 16.0,
@@ -571,8 +570,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color:
                                                             const Color(0xFF101213),
                                                         fontSize: 16.0,
@@ -652,8 +651,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .titleSmall
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color: Colors.white,
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
@@ -692,8 +691,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               .of(context)
                                                           .labelMedium
                                                           .override(
-                                                            font: GoogleFonts
-                                                                .plusJakartaSans(),
+                                                            fontFamily:
+                                                                'Plus Jakarta Sans',
                                                             color: const Color(
                                                                 0xFF57636C),
                                                             fontSize: 14.0,
@@ -790,8 +789,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
-                                                                        font: GoogleFonts
-                                                                            .plusJakartaSans(),
+                                                                        fontFamily:
+                                                                            'Plus Jakarta Sans',
                                                                         color: const Color(
                                                                             0xFF101213),
                                                                         fontSize:
@@ -878,8 +877,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                             context)
                                                                         .bodyMedium
                                                                         .override(
-                                                                          font:
-                                                                              GoogleFonts.plusJakartaSans(),
+                                                                          fontFamily:
+                                                                              'Plus Jakarta Sans',
                                                                           color:
                                                                               const Color(0xFF101213),
                                                                           fontSize:
@@ -949,8 +948,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       context)
                                                   .headlineMedium
                                                   .override(
-                                                    font: GoogleFonts
-                                                        .plusJakartaSans(),
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
                                                     color: const Color(0xFF101213),
                                                     fontSize: 24.0,
                                                     letterSpacing: 0.0,
@@ -968,8 +967,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 14.0,
@@ -1001,8 +1000,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .labelLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 16.0,
@@ -1068,8 +1067,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color:
                                                             const Color(0xFF101213),
                                                         fontSize: 16.0,
@@ -1110,8 +1109,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .labelLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 16.0,
@@ -1197,8 +1196,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color:
                                                             const Color(0xFF101213),
                                                         fontSize: 16.0,
@@ -1262,8 +1261,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .titleSmall
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color: Colors.white,
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
@@ -1296,8 +1295,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           context)
                                                       .labelMedium
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color:
                                                             const Color(0xFF57636C),
                                                         fontSize: 14.0,
@@ -1374,8 +1373,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                     context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .plusJakartaSans(),
+                                                                  fontFamily:
+                                                                      'Plus Jakarta Sans',
                                                                   color: const Color(
                                                                       0xFF101213),
                                                                   fontSize:
@@ -1462,8 +1461,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                           context)
                                                                       .bodyMedium
                                                                       .override(
-                                                                        font: GoogleFonts
-                                                                            .plusJakartaSans(),
+                                                                        fontFamily:
+                                                                            'Plus Jakarta Sans',
                                                                         color: const Color(
                                                                             0xFF101213),
                                                                         fontSize:
@@ -1531,8 +1530,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             .of(context)
                                                         .bodyMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF101213),
                                                           fontSize: 14.0,
@@ -1570,7 +1569,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      font: GoogleFonts.plusJakartaSans(),
+                                      fontFamily: 'Plus Jakarta Sans',
                                       color: const Color(0xFF101213),
                                       fontSize: 16.0,
                                       letterSpacing: 0.0,
@@ -1580,7 +1579,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          font: GoogleFonts.plusJakartaSans(),
+                                          fontFamily: 'Plus Jakarta Sans',
                                           color: const Color(0xFF101213),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,

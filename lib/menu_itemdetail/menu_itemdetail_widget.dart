@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'menu_itemdetail_model.dart';
 export 'menu_itemdetail_model.dart';
 
@@ -89,7 +88,7 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
             title: Text(
               'Item Detail ',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    font: GoogleFonts.interTight(),
+                    fontFamily: 'Inter Tight',
                     letterSpacing: 0.0,
                   ),
             ),
@@ -126,7 +125,7 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              font: GoogleFonts.interTight(),
+                              fontFamily: 'Inter Tight',
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -141,7 +140,7 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                   ),
@@ -152,7 +151,7 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
                       Text(
                         'Item Description ',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
-                              font: GoogleFonts.inter(),
+                              fontFamily: 'Inter',
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -184,14 +183,14 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  font: GoogleFonts.inter(),
+                                  fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
                             hintText: 'TextField',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  font: GoogleFonts.inter(),
+                                  fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
@@ -225,7 +224,7 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                     lineHeight: 1.0,
                                   ),
@@ -288,7 +287,7 @@ class _MenuItemdetailWidgetState extends State<MenuItemdetailWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     color: Colors.white,
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,

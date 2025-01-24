@@ -139,6 +139,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'homepage': const HomepageWidget(),
       'browse': const BrowseWidget(),
       'cart': const CartWidget(),
+      'Profile': const ProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -179,6 +180,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.account_circle_outlined,
+              size: 24.0,
+            ),
+            label: '__',
             tooltip: '',
           )
         ],

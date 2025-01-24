@@ -156,6 +156,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'checkout',
           path: '/checkout',
           builder: (context, params) => const CheckoutWidget(),
+        ),
+        FFRoute(
+          name: 'Profile',
+          path: '/profile',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'Profile')
+              : const ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'orders',
+          path: '/orders',
+          builder: (context, params) => const OrdersWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

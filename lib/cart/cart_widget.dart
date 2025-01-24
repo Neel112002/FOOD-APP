@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cart_model.dart';
 export 'cart_model.dart';
@@ -51,7 +50,7 @@ class _CartWidgetState extends State<CartWidget> {
           title: Text(
             'My Cart',
             style: FlutterFlowTheme.of(context).displaySmall.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   letterSpacing: 0.0,
                 ),
           ),
@@ -64,6 +63,7 @@ class _CartWidgetState extends State<CartWidget> {
           children: [
             Expanded(
               child: SingleChildScrollView(
+                primary: false,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,7 +76,7 @@ class _CartWidgetState extends State<CartWidget> {
                         'Below are the items in your cart.',
                         style:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  font: GoogleFonts.inter(),
+                                  fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
                       ),
@@ -193,8 +193,8 @@ class _CartWidgetState extends State<CartWidget> {
                                                                     context)
                                                                 .titleLarge
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .interTight(),
+                                                                  fontFamily:
+                                                                      'Inter Tight',
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -214,8 +214,7 @@ class _CartWidgetState extends State<CartWidget> {
                                                               .of(context)
                                                           .labelMedium
                                                           .override(
-                                                            font: GoogleFonts
-                                                                .inter(),
+                                                            fontFamily: 'Inter',
                                                             letterSpacing: 0.0,
                                                           ),
                                                     ),
@@ -234,8 +233,8 @@ class _CartWidgetState extends State<CartWidget> {
                                                                     context)
                                                                 .labelSmall
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .inter(),
+                                                                  fontFamily:
+                                                                      'Inter',
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -257,8 +256,8 @@ class _CartWidgetState extends State<CartWidget> {
                                                                     context)
                                                                 .labelSmall
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .inter(),
+                                                                  fontFamily:
+                                                                      'Inter',
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -324,7 +323,7 @@ class _CartWidgetState extends State<CartWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -355,7 +354,7 @@ class _CartWidgetState extends State<CartWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -409,7 +408,7 @@ class _CartWidgetState extends State<CartWidget> {
                     locale: '',
                   )} )',
                   style: FlutterFlowTheme.of(context).titleMedium.override(
-                        font: GoogleFonts.interTight(),
+                        fontFamily: 'Inter Tight',
                         fontSize: 20.0,
                         letterSpacing: 0.0,
                       ),
